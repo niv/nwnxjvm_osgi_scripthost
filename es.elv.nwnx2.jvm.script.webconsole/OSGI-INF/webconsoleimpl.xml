@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" configuration-policy="optional" immediate="true" name="es.elv.nwnx2.jvm.script.webconsole">
+   <implementation class="es.elv.nwnx2.jvm.script.webconsole.Impl"/>
+   <property name="felix.webconsole.label" type="String" value="scripthost_stats"/>
+   <property name="felix.webconsole.title" type="String" value="ScriptHost"/>
+   <service>
+      <provide interface="javax.servlet.Servlet"/>
+   </service>
+   <reference cardinality="1..1" interface="es.elv.nwnx2.jvm.script.ScriptHost" name="ScriptHost" policy="static"/>
+</scr:component>

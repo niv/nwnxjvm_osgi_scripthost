@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="es.elv.nwnx2.jvm.script.api">
+   <implementation class="es.elv.nwnx2.jvm.script.impl.API"/>
+   <reference cardinality="1..1" interface="es.elv.nwnx2.jvm.nwnx.chat.ChatService" name="ChatService" policy="static"/>
+   <service>
+      <provide interface="es.elv.nwnx2.jvm.script.APIHost"/>
+   </service>
+   <reference cardinality="1..1" interface="es.elv.nwnx2.jvm.hierarchy.bundles.HierarchyService" name="HierarchyService" policy="static"/>
+   <reference cardinality="0..1" interface="es.elv.nwnx2.jvm.script.StorageProvider" name="StorageProvider" policy="dynamic"/>
+</scr:component>

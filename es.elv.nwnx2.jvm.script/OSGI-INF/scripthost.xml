@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="es.elv.nwnx2.jvm.script">
+   <implementation class="es.elv.nwnx2.jvm.script.impl.ScriptHostImpl"/>
+   <service>
+      <provide interface="es.elv.nwnx2.jvm.script.ScriptHost"/>
+   </service>
+   <reference cardinality="0..n" interface="es.elv.nwnx2.jvm.script.ScriptLanguage" name="ScriptLanguage" policy="dynamic"/>
+   <reference cardinality="0..n" interface="es.elv.nwnx2.jvm.script.ScriptHostListener" name="ScriptHostListener" policy="dynamic"/>
+   <reference cardinality="0..n" interface="es.elv.nwnx2.jvm.script.ScriptableEventProvider" name="ScriptableEventProvider" policy="dynamic"/>
+</scr:component>
